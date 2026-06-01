@@ -1,0 +1,433 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+
+    background:
+    linear-gradient(
+    180deg,
+    #063b06,
+    #147a14,
+    #49a349
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+/* MENU */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:15px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(0,0,0,.25);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+}
+
+.logo{
+
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#ffd54f;
+}
+
+nav ul{
+
+    display:flex;
+    gap:20px;
+
+    list-style:none;
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#ffd54f;
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 10%;
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    color:#ffd54f;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    font-size:1.2rem;
+
+    max-width:600px;
+
+    line-height:1.8;
+}
+
+button{
+
+    margin-top:25px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ffd54f;
+
+    color:#0d3b0d;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+/* SEÇÕES */
+
+.secao{
+
+    padding:80px 10%;
+}
+
+.secao h2{
+
+    color:#ffd54f;
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+}
+
+.secao p{
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+}
+
+/* CARDS */
+
+.cards{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+}
+
+.card{
+
+    flex:1;
+
+    min-width:250px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px);
+}
+
+/* LISTA */
+
+.lista{
+
+    line-height:2;
+
+    font-size:1.1rem;
+
+    margin-left:20px;
+}
+
+/* RODAPÉ */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+    rgba(0,0,0,.25);
+}
+
+/* FLORA */
+
+.flora-container{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:1000;
+}
+
+.flora{
+
+    width:280px;
+
+    animation:
+    flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* BALÃO */
+
+.balao{
+
+    position:absolute;
+
+    right:220px;
+    bottom:220px;
+
+    width:250px;
+
+    padding:15px;
+
+    background:white;
+
+    color:#1b5e20;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,.3);
+}
+
+/* DICA */
+
+.dica-flora{
+
+    text-align:center;
+
+    color:#ffd54f;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+    animation:pulsar 1.5s infinite;
+}
+
+@keyframes pulsar{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.5;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+/* FLORES CAINDO */
+
+.flores span{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:24px;
+
+    animation:
+    cair 12s linear infinite;
+}
+
+.flores span:nth-child(1){
+    left:5%;
+}
+
+.flores span:nth-child(2){
+    left:15%;
+    animation-delay:2s;
+}
+
+.flores span:nth-child(3){
+    left:30%;
+    animation-delay:4s;
+}
+
+.flores span:nth-child(4){
+    left:45%;
+    animation-delay:1s;
+}
+
+.flores span:nth-child(5){
+    left:60%;
+    animation-delay:6s;
+}
+
+.flores span:nth-child(6){
+    left:75%;
+    animation-delay:3s;
+}
+
+.flores span:nth-child(7){
+    left:85%;
+    animation-delay:7s;
+}
+
+.flores span:nth-child(8){
+    left:95%;
+    animation-delay:5s;
+}
+
+@keyframes cair{
+
+    from{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+    }
+
+    to{
+
+        transform:
+        translateY(120vh)
+        rotate(360deg);
+    }
+}
+
+/* ÁRVORE */
+
+.arvore{
+
+    position:fixed;
+
+    top:-50px;
+    left:-50px;
+
+    width:450px;
+    height:280px;
+
+    background:
+    radial-gradient(
+    circle,
+    #66bb6a,
+    #2e7d32,
+    transparent
+    );
+
+    opacity:.5;
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+    nav{
+
+        padding:15px;
+    }
+
+    nav ul{
+
+        display:none;
+    }
+
+    .hero h1{
+
+        font-size:2.5rem;
+    }
+
+    .flora{
+
+        width:180px;
+    }
+
+    .balao{
+
+        width:170px;
+
+        right:120px;
+        bottom:140px;
+    }
+}
